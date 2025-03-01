@@ -222,27 +222,7 @@ const Footer = () => {
     e.preventDefault();
     console.log("Submitting form with data:", formData); // Log formData to check
 
-    try {
-      const response = await fetch("https://backend-brk1k432h-janhavikhonde2010s-projects.vercel.app/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", mobile: "", message: "" });
-      } else {
-        alert("Something went wrong!");
-      }
-    } catch (error) {
-      console.error("Error submitting the form:", error);
-      alert("Error submitting the form.");
-    }
-  };
-
+    
   return (
     <footer>
       <div className="footer_main" id="contac">
