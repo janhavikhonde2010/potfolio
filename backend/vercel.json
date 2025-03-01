@@ -1,20 +1,22 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "server.js"
-      }
-    ],
-    "env": {
-      "MONGO_URI": "mongodb+srv://janhavikhonde8220:IwHJAQwGYkxaZdlA@cluster0.lwbv4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-      "PORT": "5000"
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "mongodb+srv://janhavikhonde8220:IwHJAQwGYkxaZdlA@cluster0.lwbv4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   }
-  
+}
