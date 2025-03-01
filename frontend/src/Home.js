@@ -223,7 +223,7 @@ const Footer = () => {
     console.log("Submitting form with data:", formData); // Log formData to check
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("https://backend-oppyw2nqz-janhavikhonde2010s-projects.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
